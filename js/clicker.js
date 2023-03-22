@@ -163,25 +163,38 @@ window.addEventListener('load', (event) => {
  */
 upgrades = [
     {
-        name: 'Sop',
+        name: 'kattbädd',
         cost: 10,
         amount: 1,
     },
     {
-        name: 'Kvalitetsspade',
+        name: 'Element',
         cost: 50,
         clicks: 2,
     },
     {
-        name: 'Skottkärra',
+        name: 'Kattmynta',
         cost: 100,
         amount: 10,
     },
     {
-        name: 'Grävmaskin',
+        name: 'Kyckling buffé',
         cost: 1000,
         amount: 100,
+    },{
+        name: 'Ostkrokar',
+        cost: 5000,
+        clicks: 25,
     },
+    {
+        name: 'Stefan',
+        cost: 50000,
+        clicks: 1000,
+    }, {
+        name: 'Solfläck',
+        cost: 50000,
+        amount: 1000,
+    }
 ];
 
 /* createCard är en funktion som tar ett upgrade objekt som parameter och skapar
@@ -213,14 +226,14 @@ function createCard(upgrade) {
     } else {
         header.textContent = `${upgrade.name}, +${upgrade.clicks} per klick.`;
     }
-    cost.textContent = `Köp för ${upgrade.cost} benbitar.`;
+    cost.textContent = `Köp för ${upgrade.cost} Kycklingar.`;
 
     card.addEventListener('click', (e) => {
         if (money >= upgrade.cost) {
             acquiredUpgrades++;
             money -= upgrade.cost;
-            upgrade.cost *= 1.5;
-            cost.textContent = 'Köp för ' + upgrade.cost + ' benbitar';
+            upgrade.cost *= 2;
+            cost.textContent = 'Köp för ' + upgrade.cost + ' Yumyum';
             moneyPerSecond += upgrade.amount ? upgrade.amount : 0;
             moneyPerClick += upgrade.clicks ? upgrade.clicks : 0;
             message('Grattis du har köpt en uppgradering!', 'success');
