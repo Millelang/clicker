@@ -37,22 +37,22 @@ let active = false; // exempel för att visa att du kan lägga till klass för a
 
 let achievements = [
     {
-        description: 'Museet är redo att öppna, grattis! ',
+        description: 'Yumyum har vaknat grattis ',
         requiredUpgrades: 1,
         acquired: false,
     },
     {
-        description: 'Nu börjar det likna något, fortsätt gräva!',
+        description: 'Yumyum blir starkare...',
         requiredUpgrades: 10,
         acquired: false,
     },
     {
-        description: 'Klickare, med licens att klicka!',
+        description: 'Yummarn med licens att yumma',
         requiredClicks: 10,
         acquired: false,
     },
     {
-        description: 'Tac-2 god!',
+        description: 'Yumyum är snurrig nu',
         requiredClicks: 10000,
         acquired: false,
     },
@@ -233,10 +233,10 @@ function createCard(upgrade) {
             acquiredUpgrades++;
             money -= upgrade.cost;
             upgrade.cost *= 2;
-            cost.textContent = 'Köp för ' + upgrade.cost + ' Yumyum';
+            cost.textContent = 'Köp för ' + upgrade.cost + ' Kycklingar';
             moneyPerSecond += upgrade.amount ? upgrade.amount : 0;
             moneyPerClick += upgrade.clicks ? upgrade.clicks : 0;
-            message('Grattis du har köpt en uppgradering!', 'success');
+            message('Grattis du har köpt ett föremåll', 'success');
         } else {
             message('Du har inte råd.', 'warning');
         }
