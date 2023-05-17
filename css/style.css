@@ -24,7 +24,7 @@
 
 body {
     
-    background-image: url('/img/IMG_2046.JPG');
+    background-image: url('../img/IMG_2046.JPG');
     color: var(--color-dark);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: var(--step-0);
@@ -144,7 +144,7 @@ audio {
     width: var(--space-4xl-5xl);
     height: var(--space-4xl-5xl);
     font-size: var(--step-2);
-    background: url('/img/IMG_2050.JPG');
+    background: url('../img/IMG_2050.JPG');
     background-size: cover;
     background-position: center;
     border: 2px solid transparent;
